@@ -1,0 +1,7 @@
+ 
+TODO
+
+
+clean up the UI
+
+Input check to prevent invalid entry
