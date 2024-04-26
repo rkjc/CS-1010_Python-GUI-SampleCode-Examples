@@ -24,20 +24,6 @@ while count < 10:
 label_1 = tkinter.Label(bob, text="A quick brown fox got lost")
 label_1.pack()
 
-button_1 = tkinter.Button(bob, font=("Courier", 30, "italic"), text="Push the Button", command=doButton)
-button_1.pack()
-
-# ----------------------------------
-my_scrollbar = tkinter.Scrollbar(bob)
-my_scrollbar.pack()
-
-mylist = tkinter.Listbox(bob, yscrollcommand = my_scrollbar.set )
-for line in range(100):
-   mylist.insert(tkinter.END, "This is line number " + str(line))
-
-mylist.pack()
-my_scrollbar.config( command = mylist.yview )
-#------------------------------
 
 bob.mainloop()
 
