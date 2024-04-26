@@ -23,18 +23,15 @@ class MButton:
 
         self.hover_high='gray94'
         
-        self.butt_bg = 'gray86'
         self.butt_bg = self.default_bg
         if "bg" in kw:
             self.butt_bg = kw['bg']
 
-        self.butt_fg = 'black'
-        self.butt_fg = self.default_bg
+
+        self.butt_fg = self.default_fg
         if "fg" in kw:
             self.butt_fg = kw['fg']
         
-        #self.labl_0 = tk.Label(container, bg = 'gray60' )
-        #self.labl_0 = tk.Label(container, bg = self.butt_bg)
         
         self.m_butt_txt = "MButton"
         if "text" in kw:
@@ -49,9 +46,8 @@ class MButton:
             self.lbl_width = kw['width'] 
             
         lbl_width = len(self.m_butt_txt) + 1
-        #self.labl_1 = tk.Label(self.labl_0, text=self.m_butt_txt, font = self.bfont, bg=self.butt_bg, width=self.lbl_width)
-        self.labl_1 = tk.Label(container, text=self.m_butt_txt, font = self.bfont, bg=self.butt_bg, width=self.lbl_width, relief='raised')
-        #self.labl_1 = tk.Label(self.labl_0, text=self.m_butt_txt, font = self.bfont, bg=self.butt_bg, width=self.lbl_width, relief='raised')
+        self.labl_1 = tk.Label(container, text=self.m_butt_txt, font = self.bfont, bg=self.butt_bg, fg=self.butt_fg, width=self.lbl_width, relief='raised')
+
 
         self.labl_1.bind("<Button-1>", self.click_lbl_butt)
         self.labl_1.bind("<ButtonRelease-1>", self.release_lbl_button)
@@ -65,32 +61,22 @@ class MButton:
         pass
 
     def mpack(self):
-        #pass
-        #self.labl_1.pack(padx=(0,1), pady=(0,1))
-        #self.labl_0.pack(padx=1, pady=1)
         self.labl_1.pack(padx=0, pady=(2,1))
         
 
     def click_lbl_butt(self, e):
-        #print("label button clicked", e)
-        #self.labl_0.pack_configure(padx=(2,0), pady=(2,0))
-        #self.labl_1.pack_configure(padx=(2,0), pady=(2,0))
         self.labl_1.config(relief='sunken')
-        #self.labl_0.config(relief='sunken')
         self.command()
 
     def release_lbl_button(self, e):
-        #self.labl_0.pack_configure(padx=1, pady=1)
         self.labl_1.config(relief='raised')
-        #self.labl_0.config(relief='raised')
+
         
 
     def mac_butt_hover_enter(self, e):
-        #print(e)
         self.labl_1.config(bg=self.hover_high)
 
     def mac_butt_hover_leave(self, e):
-        #print(e)
         self.labl_1.config(bg=self.butt_bg)
 
     def config(self, **cfgkw):
@@ -111,7 +97,7 @@ class MButton:
             self.labl_1.config(font=self.bfont)
 
         if "width" in cfgkw:
-            sself.lbl_width = cfgkw['width']
+            self.lbl_width = cfgkw['width']
             self.labl_1.config(width=self.lbl_width)
 
 
