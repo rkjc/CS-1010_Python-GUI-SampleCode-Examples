@@ -1,5 +1,5 @@
 
-#Could also be used to abort softly if wron Python version or missing library
+#Could also be used to abort softly if wrong Python version or missing library
  
 try:
     # for Python2
