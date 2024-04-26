@@ -1,7 +1,7 @@
 .idea
 .directory
 
-
+__pycache__
 
 # a bash function for doing quick gitHub updates
 ## cupdate() {  git add . ; git commit -m "quick code update" ; git push origin main ; }
