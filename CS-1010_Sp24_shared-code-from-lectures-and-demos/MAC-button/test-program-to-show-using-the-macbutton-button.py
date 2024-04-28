@@ -23,10 +23,10 @@ def do_butt_1(): # set mbutton color
     button_0.config(bg='orange')
 
 def do_butt_2(): # reset mbutton color
-    button_0.config(bg = macbutton.MButton.default_bg)
+    button_0.config(bg = macbutton.Button.default_bg)
     
 
-button_0 = macbutton.MButton(groot, text='fake button', font = ('', 20), command=butt_action)
+button_0 = macbutton.Button(groot, text='fake button', font = ('', 20), command=butt_action)
 
 button_1 = tkinter.Button(groot, text='real button - set color', font = ('', 20), command=do_butt_1)
 

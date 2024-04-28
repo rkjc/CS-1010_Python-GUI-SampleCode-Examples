@@ -21,7 +21,7 @@ a Mac computer to test this on. Good Luck.
 
 import tkinter as tk
 
-class MButton:
+class Button:
 
     default_bg = 'gray86'
     default_fg = 'black'
@@ -29,12 +29,10 @@ class MButton:
 
     # -------- start init def --------
     def __init__(self, container, **kw):
-        print(container, kw)
 
         self.butt_bg = self.default_bg
         self.butt_fg = self.default_fg
         self.hover_high=self.default_highlight
-
 
         self.command = self.do_nothing
         if "command" in kw:
