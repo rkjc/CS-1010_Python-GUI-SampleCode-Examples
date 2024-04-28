@@ -26,7 +26,7 @@ def do_butt_2(): # reset mbutton color
     button_0.config(bg = macbutton.MButton.default_bg)
     
 
-button_0 = macbutton.MButton(groot, text='fake button', command=butt_action)
+button_0 = macbutton.MButton(groot, text='fake button', font = ('', 20), command=butt_action)
 
 button_1 = tkinter.Button(groot, text='real button - set color', font = ('', 20), command=do_butt_1)
 
@@ -37,7 +37,7 @@ label_1 = tkinter.Label(groot, text="I'm a label", font = ('', 20))
 label_1.pack()
 
 
-button_0.mpack()
+button_0.pack()
 
 button_1.pack()
 button_2.pack()
@@ -46,6 +46,3 @@ button_2.pack()
 groot.mainloop()
 
 
-
-#print(button_0.default_bg)
-#print(mb.MButton.default_bg)

@@ -1,5 +1,6 @@
 .idea
 .directory
+.kdev4
 
 __pycache__
 
