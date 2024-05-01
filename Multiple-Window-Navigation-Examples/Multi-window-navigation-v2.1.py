@@ -27,13 +27,13 @@ def open_window_two():
             window_two.deiconify()
 
         # adding widgets to the Top window
-        lbl_2 = Label(window_three, text="on window number three")
+        lbl_2 = Label(window_three, text="on window number three", font=('', 24))
         lbl_2.pack()
 
-        btn_2 = Button(window_three, text="close and return to window-two", command=close_three)
+        btn_2 = Button(window_three, text="close and return to window-two", font=('', 24), command=close_three)
         btn_2.pack()
 
-        btn_4 = Button(window_three, text="exit", command=exit_program)
+        btn_4 = Button(window_three, text="exit", font=('', 24), command=exit_program)
         btn_4.pack()
 
         # closes root if the top window is closed with the 'x'
@@ -60,13 +60,13 @@ def open_window_two():
             window_two.deiconify()
 
         # adding widgets to the Top window
-        lbl_2 = Label(window_four, text="on window number four")
+        lbl_2 = Label(window_four, text="on window number four", font=('', 24))
         lbl_2.pack()
 
-        btn_2 = Button(window_four, text="close and return to window-two", command=close_four)
+        btn_2 = Button(window_four, text="close and return to window-two", font=('', 24), command=close_four)
         btn_2.pack()
 
-        btn_4 = Button(window_four, text="exit", command=exit_program)
+        btn_4 = Button(window_four, text="exit", font=('', 24), command=exit_program)
         btn_4.pack()
 
         # closes root if the top window is closed with the 'x'
@@ -91,19 +91,19 @@ def open_window_two():
     groot.withdraw()
 
     # adding widgets to the Top window
-    lbl_2 = Label(window_two, text="on window number two")
+    lbl_2 = Label(window_two, text="on window number two", font=('', 24))
     lbl_2.pack()
 
-    btn_2 = Button(window_two, text="close and return to window-one", command=close_two)
+    btn_2 = Button(window_two, text="close and return to window-one",font=('', 24), command=close_two)
     btn_2.pack()
 
-    btn_3 = Button(window_two, text="open window three", command=open_window_three)
+    btn_3 = Button(window_two, text="open window three", font=('', 24),command=open_window_three)
     btn_3.pack()
 
-    btn_5 = Button(window_two, text="open window four", command=open_window_four)
+    btn_5 = Button(window_two, text="open window four",font=('', 24), command=open_window_four)
     btn_5.pack()
 
-    btn_4 = Button(window_two, text="exit", command=exit_program)
+    btn_4 = Button(window_two, text="exit",font=('', 24),command=exit_program)
     btn_4.pack()
 
     # closes root if the top window is closed with the 'x'
@@ -115,13 +115,13 @@ def open_window_two():
 # ====================== end of window-two code ======================
 
 # adding widgets to the main root window
-lbl_1 = Label(groot, text="label is on window one")
+lbl_1 = Label(groot, text="label is on window one",font=('', 24))
 lbl_1.pack()
 
-btn_1 = Button(groot, text="open window two", command=open_window_two)
+btn_1 = Button(groot, text="open window two", font=('', 24),command=open_window_two)
 btn_1.pack()
 
-btn_2 = Button(groot, text="exit", command=exit_program)
+btn_2 = Button(groot, text="exit", font=('', 24), command=exit_program)
 btn_2.pack()
 
 groot.mainloop()
