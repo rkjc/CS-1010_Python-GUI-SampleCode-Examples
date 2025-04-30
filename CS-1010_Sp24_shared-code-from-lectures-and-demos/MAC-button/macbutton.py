@@ -75,7 +75,9 @@ class Button:
         self.command()
 
     def release_lbl_button(self, e):
+        self.labl_1.config(bg=self.butt_bg)
         self.labl_1.config(relief='raised')
+
 
     def mac_butt_hover_enter(self, e):
         self.labl_1.config(bg=self.hover_high)
@@ -93,12 +95,14 @@ class Button:
 
 
 
-    def config(self, **kw):
+    def config( **kw):
         if "command" in kw:
             self.command = kw['command']
             del kw['command']
 
         self.labl_1.config(kw)
+        #print("kw bg color", kw['bg'])
+        self.butt_bg = kw['bg']
 
     
 '''
@@ -110,3 +114,4 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
+
