@@ -1,8 +1,13 @@
 import tkinter as tk
 root = tk.Tk()
 root.geometry("400x400")
+import random
+
+xleft = 300
+xright = 400
 
 def motion(event):
+    global xleft, xright
     x = event.x
     y = event.y
     lbl_x.config(text=x)
@@ -11,10 +16,14 @@ def motion(event):
     abs_y = root.winfo_pointery()
     lbl_absx.config(text=abs_x)
     lbl_absy.config(text=abs_y)
-    if 300 < x and x < 320 and 300 < y and y < 320:
+    if xleft < x and x < xright and 300 < y and y < 340:
         root.config(bg='red')
+        rndy = random.randint(0, 360)
+        xleft = rndy
+        xright = xleft + 40
     if 50 < x and x < 60 and 250 < y and y < 260:
             root.config(bg='green')
+    
 
 lblfrm_1 = tk.LabelFrame(root, text="relative")
 lblfrm_2 = tk.LabelFrame(root, text="absolute")

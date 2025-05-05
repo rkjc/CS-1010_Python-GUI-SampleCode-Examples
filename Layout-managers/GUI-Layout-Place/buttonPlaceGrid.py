@@ -25,8 +25,8 @@ btn={}
 for x in range(10):
     for y in range(10):
         namme=str(x+10*y)
-        btn[(x+10*y)] = Button(frame, borderwidth=0, text=namme,
-                            command=lambda idd=(x+10*y): doButton(idd))
+        btn[(x+10*y)] = Button(frame,  text=namme,
+                            command=  lambda idd=(x+10*y): doButton(idd))
         btn[(x+10*y)].grid(column=x, row=y, sticky=N+S+E+W)
 
 for x in range(10):

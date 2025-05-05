@@ -19,10 +19,10 @@ def motion(event):
 lblfrm_1 = tk.LabelFrame(root, text="relative")
 lblfrm_2 = tk.LabelFrame(root, text="absolute")
 
-lbl_x = tk.Label(lblfrm_1, text="x-coord")
-lbl_y = tk.Label(lblfrm_1, text="y-coord")
-lbl_absx = tk.Label(lblfrm_2, text="x-coord")
-lbl_absy = tk.Label(lblfrm_2, text="y-coord")
+lbl_x = tk.Label(lblfrm_1, text="x-coord", font=(None, 20))
+lbl_y = tk.Label(lblfrm_1, text="y-coord", font=(None, 20))
+lbl_absx = tk.Label(lblfrm_2, text="x-coord", font=(None, 24))
+lbl_absy = tk.Label(lblfrm_2, text="y-coord",  font=(None, 24))
 
 lblfrm_1.pack()
 lblfrm_2.pack()
@@ -32,6 +32,8 @@ lbl_absx.pack(side=tk.LEFT, padx = 5)
 lbl_absy.pack(side=tk.LEFT, padx = 5)
 
 root.bind('<Motion>', motion)
+
+
 root.mainloop()
 
 # https://stackoverflow.com/questions/22925599/mouse-position-python-tkinter

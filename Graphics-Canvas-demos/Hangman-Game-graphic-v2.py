@@ -3,7 +3,7 @@ import random
 
 groot = Tk()
 groot.title("GUESS THE WORD: AMONG US EDITION")
-groot.geometry("400x400")
+groot.geometry("600x400")
 
 
 # ====================================Functions==============================================
@@ -55,10 +55,13 @@ count2 = 0
 
 # ==================================== widgets ========================
 
-hangman_stick = Canvas(groot)
-hangman_stick.create_line(70, 20, 70, 250, width=2)
-hangman_stick.create_line(70, 20, 150, 20, width=2)
-hangman_stick.create_line(150, 20, 150, 50, width=2)
+hangman_stick = Canvas(groot, bg='cyan')
+
+hangman_stick.create_oval(10, 10, 80, 80, outline = "black", fill = "white",width = 2)
+
+hangman_stick.create_line(70, 40, 70, 250, width=6)
+hangman_stick.create_line(70, 40, 150, 20, width=2)
+hangman_stick.create_line(150, 20, 150, 50, width=10)
 
 label_1 = Label(groot, text=count)
 

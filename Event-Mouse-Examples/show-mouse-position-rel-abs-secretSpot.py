@@ -14,8 +14,8 @@ def motion(event):
 
 lblfrm_1 = tk.LabelFrame(root, text="relative")
 
-lbl_x = tk.Label(lblfrm_1, text="x-coord")
-lbl_y = tk.Label(lblfrm_1, text="y-coord")
+lbl_x = tk.Label(lblfrm_1, text="x-coord",font=(None, 28))
+lbl_y = tk.Label(lblfrm_1, text="y-coord",font=(None, 28))
 
 lblfrm_1.pack()
 lbl_x.pack(side=tk.LEFT, padx = 5)

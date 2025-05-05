@@ -7,6 +7,10 @@ groot = tk.Tk()
 def doThis():
     dice = random.randint(1,6)
     lbl1.config(image=diceimgarray[dice-1])
+    
+def dice2():
+    dice = random.randint(1,6)
+    lbl2.config(image=diceimgarray[dice-1])
 
 substringsize = 3
 
@@ -24,6 +28,12 @@ btn1.pack()
 
 lbl1 = tk.Label(groot, text="picture of dice")
 lbl1.pack()
+
+btn2 = tk.Button(groot, text="roll dice", command=dice2, font=('',30))
+btn2.pack()
+
+lbl2 = tk.Label(groot, text="picture of dice")
+lbl2.pack()
 
 doThis()
 groot.mainloop()
