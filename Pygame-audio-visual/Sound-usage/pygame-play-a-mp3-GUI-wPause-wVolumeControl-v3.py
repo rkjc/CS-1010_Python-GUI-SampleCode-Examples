@@ -2,17 +2,17 @@ from pygame import mixer
 from tkinter import *
 
 groot = Tk()
-groot.geometry("500x450")
+groot.geometry("550x450")
 
 # Starting the mixer
 mixer.init()
 
-# Loading the song
+# Loading the song (hard coded in this version)
 song_file_name = "HoldOnTight.mp3"
 mixer.music.load(song_file_name)
 
 # Setting the volume
-mixer.music.set_volume(0.7)
+mixer.music.set_volume(0.5)
 
 #paused = mixer.music.get_busy()
 paused = False
@@ -44,8 +44,8 @@ def stop_music():
     paused = False
     btn_3.config(text="pause")
 
-
-lbl_2 = Label(groot, text=song_file_name)
+now_playing = "Now Playing >>  " + song_file_name
+lbl_2 = Label(groot, text=now_playing, font=('arial', 18))
 lbl_2.pack()
 
 btn_2 = Button(groot, text="play", command=play_music)
@@ -63,8 +63,6 @@ btn_5.pack()
 # to connect the radio buttons together as a group
 myIntThing = IntVar()
 
-# sets which button will be selected by default
-myIntThing.set( 0 )
 
 
 def doButt():
@@ -73,22 +71,37 @@ def doButt():
     vol = float(temp_var) * 0.01
     mixer.music.set_volume(vol)
 
-L2 = Label(groot, text="volume control")
+L2 = Label(groot, text="volume control", font=('arial', 18))
 L2.pack()
 
-L1 = Label(groot, text="selection", font=('arial', 20))
+L1 = Label(groot, text="selection", font=('arial', 18))
 L1.pack()
 
+volFrame = Frame(groot)
+first_run = True
+
+# sets which button will be selected by default
+myIntThing.set(21)
 
 for y in range(0,10):
-    aFrame = Frame(groot)
-    for x in range(1,10):
-        vol = x + (y * 10)
+    aFrame = Frame(volFrame)
+#     if first_run:
+#         tempRadButt = Radiobutton(aFrame)
+#         tempRadButt.config(text="00", variable=myIntThing, value=0, command=doButt)
+#         tempRadButt.pack(side='left')
+#         first_run = False
+    
+    for x in range(1,11):
+        vol = (y * 10) + x
+        if x % 10 == 0:
+            vol_str = str(x * (y + 1))
+        else:
+            vol_str = str(y) + str(x)
         tempRadButt = Radiobutton(aFrame)
-        tempRadButt.config(text=str(vol), variable=myIntThing, value=vol, command=doButt)
+        tempRadButt.config(text=vol_str, variable=myIntThing, value=vol, command=doButt)
         tempRadButt.pack(side='left')
     aFrame.pack()
-    
+volFrame.pack()
 # ------------------------------------
 
 groot.mainloop()

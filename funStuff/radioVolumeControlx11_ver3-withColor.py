@@ -13,7 +13,7 @@ def doButt():
     temp_var = myIntThing.get()
     L1.configure(text=temp_var)
 
-L2 = tk.Label(groot, text="volume control")
+L2 = tk.Label(groot, text="volume control", font=('arial', 20))
 L2.pack()
 
 L1 = tk.Label(groot, text="selection", font=('arial', 20))
