@@ -27,7 +27,7 @@ label_2.pack()
 button_1 = tkinter.Button(groot, text="Push Button", command=pushButton)
 #initial button color setup
 bColor1 = 'red'
-button_1.configure(background = bColor1, highlightbackground = bColor1, activebackground = bColor1)
+button_1.configure(background = bColor1, highlightbackground = bColor1, activebackground = bColor1, font=("arial", 32))
 button_1.pack()
 
 groot.mainloop()

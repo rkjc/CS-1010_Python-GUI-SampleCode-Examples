@@ -21,11 +21,13 @@ def doButton():
 main = tk.Tk()
 main.geometry("300x200")
 
-L1 = tk.Label(main, text="This is a Label")
+myfont = ("", 18)
+
+L1 = tk.Label(main, text="This is a Label", font = myfont)
 L1.pack()
 
 
-B1 = tk.Button(main, text='Push the Button', command=doButton)
+B1 = tk.Button(main, text='Push the Button', command=doButton, font = myfont)
 B1.pack()
 
 main.mainloop( )
